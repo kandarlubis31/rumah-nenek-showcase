@@ -13,6 +13,18 @@
 
 ---
 
+## 📸 Tampilan
+
+### Desktop
+
+![Rumah Nenek — layar gabung room, tampilan desktop](screenshots/desktop.png)
+
+### Mobile
+
+![Rumah Nenek — layar gabung room, tampilan mobile](screenshots/mobile.png)
+
+---
+
 ## ❌ Masalahnya
 
 - Kakek-nenek tidak bisa/kurang nyaman pakai WhatsApp — harus buka app, cari kontak, tekan tombol panggil
