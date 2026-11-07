@@ -50,20 +50,20 @@
 
 ```mermaid
 flowchart TB
- subgraph RUMAH[" Rumah opa"]
- E[" HP lansia<br/>Capacitor Android / node-wrtc<br/>auto-join + speaker"]
- end
- subgraph KELUARGA[" Keluarga di mana saja"]
- B1[" Browser A"]
- B2[" Browser B"]
- end
- SIG[" Signaling server<br/>Express + Socket.io<br/>rooms Map · max 8"]
- STUN[" STUN/TURN<br/>Google STUN · openrelay TURN"]
- SIG -->|"offer/answer/ICE"| E & B1 & B2
- E <-.->|"audio P2P WebRTC"| B1
- E <-.->|"audio P2P WebRTC"| B2
- B1 <-.-> B2
- STUN -.-> E & B1 & B2
+    subgraph RUMAH[" Rumah opa"]
+        E[" HP lansia<br/>Capacitor Android / node-wrtc<br/>auto-join + speaker"]
+    end
+    subgraph KELUARGA[" Keluarga di mana saja"]
+        B1[" Browser A"]
+        B2[" Browser B"]
+    end
+    SIG[" Signaling server<br/>Express + Socket.io<br/>rooms Map · max 8"]
+    STUN[" STUN/TURN<br/>Google STUN · openrelay TURN"]
+    SIG -->|"offer/answer/ICE"| E & B1 & B2
+    E <-.->|"audio P2P WebRTC"| B1
+    E <-.->|"audio P2P WebRTC"| B2
+    B1 <-.-> B2
+    STUN -.-> E & B1 & B2
 ```
 
 - **Stack:** Node.js + Express · Socket.io · WebRTC (browser native + `wrtc` untuk client lansia Node) · Capacitor (Android wrapper) · speaker npm
